@@ -504,7 +504,7 @@ function consoleMessage() {
   console.log("%cso you are the curious one.", `${mono}color:#9a9a9a;font-size:13px;`);
   console.log("%cthe door is not open yet. 07.11.2026 · 16:00 GMT", `${mono}color:#666;`);
   console.log("%cwatch the glitches. they are not random.", `${mono}color:#444;font-style:italic;`);
-  console.log("%cx.com/5207418", `${mono}color:#333;`);
+  console.log("%cx.com/_5207418_", `${mono}color:#333;`);
 }
 
 /* ---------- simulation ---------- */
