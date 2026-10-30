@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://5207418.xyz/sitemap.xml
