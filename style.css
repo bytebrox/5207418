@@ -23,6 +23,74 @@ body {
   display: block;
 }
 
+.x-link {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: rgba(232, 232, 232, 0.28);
+  transform: translateX(-50%);
+  transition: color 0.45s ease, opacity 0.45s ease;
+  cursor: pointer;
+}
+
+.x-link:hover,
+.x-link:focus-visible {
+  color: rgba(232, 232, 232, 0.85);
+  outline: none;
+}
+
+.x-link svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.ca {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  z-index: 10;
+  max-width: calc(100vw - 32px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(232, 232, 232, 0.22);
+  font-family: "Press Start 2P", monospace;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateX(-50%);
+  transition: color 0.45s ease;
+  cursor: pointer;
+}
+
+.ca:hover,
+.ca:focus-visible {
+  color: rgba(232, 232, 232, 0.7);
+  outline: none;
+}
+
+.ca.copied {
+  color: rgba(232, 232, 232, 0.85);
+}
+
+@media (max-width: 600px) {
+  .ca {
+    font-size: 5px;
+    letter-spacing: 0.06em;
+  }
+}
+
 .beam,
 .scanlines,
 .grain,

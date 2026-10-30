@@ -1,0 +1,4 @@
+{
+  "buildCommand": "node tools/inject-env.js",
+  "outputDirectory": "."
+}

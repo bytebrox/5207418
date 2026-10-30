@@ -829,8 +829,34 @@ function initGrain() {
   document.getElementById("grain").style.backgroundImage = `url(${c.toDataURL()})`;
 }
 
+function initCa() {
+  const el = document.getElementById("ca");
+  const address = (window.__ENV__ && window.__ENV__.CONTRACT_ADDRESS) || "";
+  if (!el || !address) return;
+
+  el.hidden = false;
+  el.textContent = address;
+
+  let reset;
+  el.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(address);
+      el.classList.add("copied");
+      el.textContent = "COPIED";
+      clearTimeout(reset);
+      reset = setTimeout(() => {
+        el.classList.remove("copied");
+        el.textContent = address;
+      }, 1400);
+    } catch {
+      /* clipboard may be blocked */
+    }
+  });
+}
+
 buildLayout(remaining().parts, reduceMotion ? "snap" : "intro");
 initDust();
 initGrain();
+initCa();
 consoleMessage();
 requestAnimationFrame(frame);

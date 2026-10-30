@@ -1,0 +1,3 @@
+window.__ENV__ = Object.freeze({
+  CONTRACT_ADDRESS: "00000000000000000000000000000000"
+});
